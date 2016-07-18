@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 // the code has errors.
 
@@ -12,10 +13,10 @@ Point at 1;-1 */
 
 class IdealShape
 {
-	private:
+	protected:
 		double dimension;
     public:
-		IdealShape(double _dim){};
+		IdealShape(double _dim): dimension (_dim){};
 		void draw (double x_center, double y_center){};
 		void setPoint(double x, double y)
 		{
@@ -26,7 +27,7 @@ class IdealShape
 class Square : public IdealShape
 {
     public:
-		Square(double _dim){};
+		Square(double _dim): IdealShape(_dim){};
 		void draw (double x_center, double y_center)
 		{
 			setPoint(x_center-dimension/2,y_center-dimension/2);

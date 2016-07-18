@@ -5,8 +5,8 @@ using namespace std;
 // member initializer lists - 1
 class Foo
 {
-  vector<int> vec;
   int count;
+  vector<int> vec;
 
 public:
   Foo(int val)
@@ -20,6 +20,6 @@ public:
 int main()
 {
 	Foo f(5);
-	std::cout<<f.vecSize();
+	std::cout << f.vecSize();
 	return 0;
 }
