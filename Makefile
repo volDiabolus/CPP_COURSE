@@ -1,4 +1,4 @@
-CPP = gcc
+CPP = g++
 .PHONY: all
 all:
 	$(CPP) inherit_virtual.cpp -o inherit_virtual
