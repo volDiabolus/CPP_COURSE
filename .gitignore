@@ -1,2 +1,6 @@
 *.out
+<<<<<<< HEAD
 *.exe
+=======
+*.exe
+>>>>>>> upstream/master

@@ -1,6 +1,9 @@
 #include <iostream>
 #include <math.h>
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
 // the code has errors.
 
 /* Point at -1;-0.57735
@@ -16,8 +19,8 @@ class IdealShape
 	protected:
 		double dimension;
     public:
-		IdealShape(double _dim): dimension (_dim){};
-		void draw (double x_center, double y_center){};
+		IdealShape(double _dim): dimension(_dim){};
+		virtual void draw (double x_center, double y_center) =0;
 		void setPoint(double x, double y)
 		{
 			std::cout<<"Point at "<<x<<";"<<y<<"\n";
@@ -51,11 +54,14 @@ class Triangle : public IdealShape
 
 int main()
 {
-	IdealShape I(2);
-	I.draw(0,0);
+	//IdealShape I(2);
+	//I.draw(0,0);
 	Triangle(2).draw(0,0);
 	Square S(2);
 	S.draw(0,0);
+	IdealShape * I2 = new Square(2);
+	I2->draw(0,0);
+	delete I2;
 	return 0;
 }
 

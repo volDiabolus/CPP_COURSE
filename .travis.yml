@@ -1,0 +1,8 @@
+language: cpp
+compiler:
+  -gcc
+before_install:
+  - pip install --user cpp-coveralls
+script: make all && make test
+after_success:
+  - coveralls --gcov-options '\-lp'
